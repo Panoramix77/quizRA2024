@@ -71,7 +71,7 @@ quiz = [
     {
         "question": "¿Cuál de las siguientes opciones es una característica de la lógica difusa?",
         "options": ["Permite tomar decisiones más o menos intensas en función de grados intermedios de cumplimiento de una premisa", "Es una lógica paraconsistente multivaluada en la cual los valores de verdad de las variables pueden ser cualquier número real comprendido entre 0 y 1", "Es una lógica que se utiliza para representar relaciones de dependencia entre variables aleatorias y para realizar inferencias sobre ellas", "Es una lógica que se utiliza para modelar sistemas complejos y no lineales"],
-        "correct": 1  # Permite tomar decisiones más o menos intensas en función de grados intermedios de cumplimiento de una premisa
+        "correct": 1  # Permite tomar decisiones más o menos intensas en función de grados intermedios de cumplimiento de una premisa.
     },
     {
         "question": "¿Cuál es la principal ventaja del método de inferencia de Takagi-Sugeno sobre el método de inferencia de Mandani?",
@@ -117,7 +117,7 @@ if 'quiz' not in st.session_state:
     st.session_state.submitted = False
 
 # Interfaz de la aplicación
-st.title("Test de Razonamiento Aproximado (Curso IA-ML 2025)")
+st.title("Test de Razonamiento Aproximado (Batería 2024)")
 
 # Mostrar cada pregunta
 for i, q in enumerate(st.session_state.quiz, 1):
@@ -144,7 +144,7 @@ for i, q in enumerate(st.session_state.quiz, 1):
                 st.error(f"Vaya tela... la respuesta correcta es: {correct_answer}. Revísalo anda!")
 
 # Botón para finalizar el test
-if st.button("Finalizar el Test"):
+if st.button("Finalizar el Test Batería 2024"):
     st.session_state.submitted = True
 
 # Mostrar resultados al finalizar
@@ -169,7 +169,7 @@ if st.session_state.submitted:
     percentage_unanswered = (unanswered / total_questions) * 100 if total_questions > 0 else 0
     
     # Mostrar resultados
-    st.success(f"Test finalizado. Tu puntuación: {correct}/{total_questions}")
+    st.success(f"Test Batería 2024 finalizado. Tu puntuación: {correct}/{total_questions}")
     st.write(f"**Número de aciertos:** {correct} ({percentage_correct:.2f}%)")
     st.write(f"**Número de fallos:** {incorrect} ({percentage_incorrect:.2f}%)")
     st.write(f"**Preguntas no contestadas:** {unanswered} ({percentage_unanswered:.2f}%)")
